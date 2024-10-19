@@ -1,0 +1,226 @@
+body {
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+}
+
+/* Gaya Umum untuk Navigasi Bar */
+.navbar-dekstop {
+    background-color: #333; /* Warna latar belakang navbar */
+    overflow: hidden; /* Menyembunyikan konten yang meluap */
+    position: fixed; /* Mengatur navbar agar tetap di atas saat scroll */
+    top: 0; /* Posisi di bagian atas */
+    width: 100%; /* Lebar penuh */
+    z-index: 1000; /* Memastikan navbar berada di atas elemen lain */
+}
+
+/* Gaya untuk Menu */
+.menu {
+    display: flex; /* Mengatur menu agar menjadi flexbox */
+    justify-content: center; /* Menyelaraskan item di tengah */
+    padding: 15px; /* Memberikan padding di dalam navbar */
+}
+
+/* Gaya untuk Tautan Navigasi */
+.nav-link {
+    color: white; /* Warna teks tautan */
+    text-decoration: none; /* Menghapus garis bawah dari tautan */
+    padding: 14px 20px; /* Memberikan padding untuk tautan */
+    transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+
+/* Gaya saat tautan dihover */
+.nav-link:hover {
+    background-color: #575757; /* Mengubah warna latar belakang saat dihover */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada hover */
+}
+
+/* Gaya untuk tautan aktif */
+.nav-link.active {
+    background-color: #4CAF50; /* Warna latar belakang untuk tautan aktif */
+    border-radius: 5px; /* Menambahkan sudut melengkung pada tautan aktif */
+}
+
+/* Gaya untuk Home */
+.home-section {
+    display: flex; /* Mengaktifkan flexbox */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    justify-content: center; /* Menjaga agar semua konten berada di tengah secara horizontal */
+    height: 100vh; /* Membuat tinggi section sama dengan tinggi viewport */
+    width: 100vw; /* Membuat lebar section sama dengan lebar viewport */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('asset/bgmain.jpg') no-repeat center center fixed; /* Gradient dan gambar latar belakang */
+    background-size: cover; /* Mengatur ukuran gambar agar menutupi seluruh area */
+    padding: 20px; /* Memberikan padding */
+    color: white; /* Warna teks */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+}
+
+.content-home {
+    flex: 1; /* Membiarkan konten teks mengisi ruang yang tersedia */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    margin-right: 20px; /* Menjaga jarak antara teks dan gambar */
+}
+
+h1 {
+    font-size: 2.5em; /* Ukuran font untuk judul */
+    margin: 0; /* Menghilangkan margin */
+}
+
+p {
+    font-size: 1.2em; /* Ukuran font untuk paragraf */
+    margin: 10px 0; /* Margin atas dan bawah untuk paragraf */
+}
+
+.hero-image {
+    max-width: 30%; /* Mengatur lebar maksimum gambar agar tidak terlalu besar */
+    width: 100%; /* Menjaga gambar responsif */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 10px; /* Sudut melengkung */
+    display: block; /* Menghilangkan jarak bawah */
+    margin-left: 20px; /* Jarak antara gambar dan teks */
+}
+
+/* Gaya untuk About */
+.about-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('asset/bgmain.jpg') no-repeat center center fixed; /* Ganti dengan path gambar latar belakang yang sesuai */
+    background-size: cover; /* Menjaga gambar latar belakang agar selalu memenuhi area */
+    display: flex; /* Mengaktifkan flexbox untuk mempermudah penataan elemen */
+    justify-content: center; /* Menyelaraskan elemen secara horizontal di tengah */
+    align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+    height: 100vh; /* Membuat tinggi section sama dengan tinggi viewport */
+    width: 100vw; /* Mengatur tinggi section sama dengan tinggi viewport */
+    color: white; /* Mengatur warna teks menjadi putih */
+    padding: 20px; /* Memberikan padding */
+}
+
+.content-about {
+    flex-basis: 50%; /* Mengatur elemen ini untuk mengambil 50% dari lebar */
+    max-width: 1000px; /* Batas maksimum lebar elemen */
+    margin: 0 auto; /* Menempatkan elemen di tengah */
+    display: flex; /* Mengaktifkan flexbox untuk konten di dalamnya */
+    flex-direction: column; /* Agar teks dalam elemen berurutan vertikal */
+    justify-content: center; /* Mengatur konten di dalam elemen agar berada di tengah vertikal */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    padding: 20px; /* Memberikan padding di dalam elemen */
+}
+.about-text {
+    opacity: 0; /* Awalnya tidak terlihat */
+    transform: translateY(20px); /* Geser teks ke bawah */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transisi untuk opacity dan transform */
+}
+
+.about-text.visible {
+    opacity: 1; /* Teks terlihat */
+    transform: translateY(0); /* Kembali ke posisi asli */
+}
+
+
+/* Gaya untuk Portofolio */
+.portofolio-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('asset/bgmain.jpg') no-repeat center center fixed; /* Ganti dengan path gambar latar belakang yang sesuai */
+    background-size: cover; /* Mengatur ukuran gambar agar menutupi seluruh area */
+    display: flex; /* Mengaktifkan flexbox untuk mempermudah penataan elemen */
+    flex-direction: column; /* Mengatur arah kolom */
+    justify-content: center; /* Menjaga konten tetap di tengah */
+    align-items: center; /* Menyelaraskan elemen secara horizontal di tengah */
+    height: auto; /* Tinggi akan disesuaikan dengan konten */
+    padding: 20px; /* Memberikan padding */
+    color: #333; /* Warna teks untuk portofolio */
+    height: 100vh; /* Membuat tinggi section sama dengan tinggi viewport */
+    width: 100vw; /* Mengatur tinggi section sama dengan tinggi viewport */
+}
+
+.card-portofolio {
+    display: grid; /* Menggunakan grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom untuk kartu */
+    gap: 20px; /* Jarak antar kartu */
+    max-width: 1000px; /* Batas maksimum lebar */
+    width: 100%; /* Memenuhi lebar penuh */
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih transparan untuk kartu */
+    padding: 20px; /* Memberikan padding di dalam kartu */
+    border-radius: 10px; /* Sudut melengkung untuk kartu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    text-align: center; /* Menempatkan teks di tengah */
+    backdrop-filter: blur(10px); /* Menambahkan efek blur pada latar belakang */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Menambahkan transisi untuk transformasi dan bayangan */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Membesarkan kartu saat dihover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan yang lebih besar saat dihover */
+}
+
+/* Gaya untuk Section Kontak */
+.contact-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('asset/bgmain.jpg') no-repeat center center fixed; /* Menggunakan latar belakang yang sama */
+    background-size: cover; /* Menjaga gambar latar belakang agar selalu memenuhi area */
+    padding: 50px; /* Memberikan padding */
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+.content-contact h1 {
+    margin-bottom: 20px; /* Margin bawah untuk judul */
+}
+
+/* Gaya untuk Formulir Kontak */
+.contact-form {
+    max-width: 600px; /* Lebar maksimum formulir */
+    margin: 0 auto; /* Menempatkan formulir di tengah */
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih transparan untuk formulir */
+    padding: 30px; /* Memberikan padding di dalam formulir */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    border-radius: 10px; /* Sudut melengkung untuk formulir */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Margin bawah untuk grup formulir */
+    text-align: left; /* Menyelaraskan teks label ke kiri */
+}
+
+.form-group label {
+    display: block; /* Menampilkan label sebagai blok */
+    margin-bottom: 10px; /* Margin bawah untuk label */
+    font-weight: bold; /* Menebalkan font label */
+}
+
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%; /* Mengatur lebar input dan textarea penuh */
+    padding: 10px; /* Memberikan padding di dalam input dan textarea */
+    border: 1px solid #ccc; /* Garis border */
+    border-radius: 5px; /* Sudut melengkung untuk input dan textarea */
+    font-size: 16px; /* Ukuran font */
+}
+
+.form-group textarea {
+    resize: none; /* Menghilangkan opsi resize pada textarea */
+}
+
+/* Gaya untuk Tombol Kirim */
+.submit-btn {
+    background-color: #28a745; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    padding: 10px 20px; /* Padding di dalam tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Sudut melengkung untuk tombol */
+    cursor: pointer; /* Menampilkan kursor pointer saat hover */
+    font-size: 16px; /* Ukuran font untuk tombol */
+    transition: background-color 0.3s ease; /* Efek transisi untuk tombol */
+}
+
+.submit-btn:hover {
+    background-color: #218838; /* Mengubah warna latar belakang saat dihover */
+}
+
+/* Media Query untuk Responsivitas */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 20px; /* Mengurangi padding pada formulir untuk layar kecil */
+    }
+
+    .card-portofolio {
+        grid-template-columns: repeat(1, 1fr); /* Menjadi 1 kolom pada layar kecil */
+    }
+}
